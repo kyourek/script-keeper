@@ -1,0 +1,24 @@
+#summary One-sentence summary of this page.
+#labels Featured,Phase-Design
+
+= Introduction =
+ScriptKeeper is an HtmlHelper extension method that tracks registered scripts.
+
+= Details =
+
+Its main purpose is to be used in .NET MVC partial views in which scripts are
+required. Normally, partial views that require scripts would have to have
+their scripts included in the parent view so as not to include the script
+each time the partial view is rendered.
+
+When a script is registered with one of the ScriptKeeper's script groups, the
+ScriptKeeper remembers the source of the script and will only render it once
+when the Render method is called. That means a partial view that registers a
+script can be rendered multiple times on the same page, and the required script
+will only be included once.
+
+The ScriptKeeper can also be used to register short inline scripts. These scripts
+will be rendered in their own script tag when the Render method is called.
+
+See the example MVC app called Keeper.OfScripts.Example in this solution for
+more information.
