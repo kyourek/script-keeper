@@ -41,7 +41,6 @@
     <Reference Include="System.Web.Abstractions" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AssemblyInfo.cs" />
     <Compile Include="Script.cs" />
     <Compile Include="ScriptGroup.cs" />
     <Compile Include="Exceptions.cs" />
