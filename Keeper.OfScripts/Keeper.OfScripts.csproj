@@ -52,4 +52,7 @@
   <ItemGroup>
     <Folder Include="Html\" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="ReadMe.txt" />
+  </ItemGroup>
 </Project>
