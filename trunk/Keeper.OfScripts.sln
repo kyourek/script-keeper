@@ -1,6 +1,6 @@
 ﻿
-Microsoft Visual Studio Solution File, Format Version 11.00
-# Visual Studio 2010
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Keeper.OfScripts.Example", "Keeper.OfScripts.Example\Keeper.OfScripts.Example.csproj", "{95F17DC8-B6D7-44D8-BFEC-EB3F3F633964}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Keeper.OfScripts", "Keeper.OfScripts\Keeper.OfScripts.csproj", "{7F890D6C-1E6C-4938-8749-079EBEB6FB4B}"
