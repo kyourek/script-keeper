@@ -16,7 +16,7 @@ namespace Keeper.OfScripts
 		void Register(params string[] scripts);
 	}
 		
-	public abstract class ScriptGroup<TScript> : IScriptGroup, IEnumerable<TScript>
+	abstract class ScriptGroup<TScript> : IScriptGroup, IEnumerable<TScript>
 		where TScript : Script
 	{
 		private readonly List<TScript> _List = new List<TScript>();	
@@ -79,7 +79,7 @@ namespace Keeper.OfScripts
 		}
 	}
 	
-	public class LocalScriptGroup : ScriptGroup<LinkedScript>
+	class LocalScriptGroup : ScriptGroup<LinkedScript>
 	{		
 		private ILocalScriptHelper _Helper;		
 		
@@ -119,7 +119,7 @@ namespace Keeper.OfScripts
 		}
 	}
 	
-	public class RemoteScriptGroup : ScriptGroup<LinkedScript>
+	class RemoteScriptGroup : ScriptGroup<LinkedScript>
 	{
 		public override bool HasRegistered(string script)
 		{
@@ -141,7 +141,7 @@ namespace Keeper.OfScripts
 		}
 	}
 	
-	public class InlineScriptGroup : ScriptGroup<InlineScript>
+	class InlineScriptGroup : ScriptGroup<InlineScript>
 	{
 		public override bool HasRegistered(string script)
 		{
