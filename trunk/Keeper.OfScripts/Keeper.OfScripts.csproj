@@ -10,6 +10,7 @@
     <RootNamespace>Keeper.OfScripts</RootNamespace>
     <AssemblyName>Keeper.OfScripts</AssemblyName>
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <Description>MVC Script Registrar</Description>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
