@@ -10,6 +10,7 @@
     <RootNamespace>Keeper.OfScripts.Tests</RootNamespace>
     <AssemblyName>Keeper.OfScripts.Tests</AssemblyName>
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <Description>ScriptKeeper Unit Tests</Description>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>

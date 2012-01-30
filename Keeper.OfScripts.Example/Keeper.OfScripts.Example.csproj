@@ -11,6 +11,7 @@
     <RootNamespace>Keeper.OfScripts.Example</RootNamespace>
     <AssemblyName>Keeper.OfScripts.Example</AssemblyName>
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <Description>Example MVC Project for ScriptKeeper</Description>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
