@@ -11,7 +11,6 @@
     <RootNamespace>Keeper.OfScripts.Example</RootNamespace>
     <AssemblyName>Keeper.OfScripts.Example</AssemblyName>
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
-    <ReleaseVersion>0.1.0</ReleaseVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
