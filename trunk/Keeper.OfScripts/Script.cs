@@ -38,7 +38,7 @@ namespace Keeper.OfScripts
 		public bool Equals(Script other)
 		{
 			if (other == null) return false;
-			if (other.Source != Source) return false;
+			if (!other.Source.Equals(Source)) return false;
 			if (other.GetType() != GetType()) return false;
 			
 			return true;
