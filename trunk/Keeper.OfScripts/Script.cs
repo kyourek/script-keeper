@@ -5,7 +5,7 @@ using System.Collections.Generic;
 
 namespace Keeper.OfScripts
 {
-	abstract class Script : IEquatable<Script>
+	internal abstract class Script : IEquatable<Script>
 	{
 		private string _Source;
 		
@@ -45,7 +45,7 @@ namespace Keeper.OfScripts
 		}		
 	}
 	
-	class LinkedScript : Script
+	internal class LinkedScript : Script
 	{
 		public LinkedScript(string source) : base(source) { }
 		
@@ -55,7 +55,7 @@ namespace Keeper.OfScripts
 		}
 	}
 	
-	class InlineScript : Script
+	internal class InlineScript : Script
 	{
 		public InlineScript(string source) : base(source) { }
 		
