@@ -1,4 +1,4 @@
-ScriptKeeper is an HtmlHelper extension method that tracks registered scripts.
+ScriptKeeper tracks scripts.
 
 //////////////////////////////////////////////////////////////////////////////
 License:
@@ -75,4 +75,13 @@ Render the output of your registered scripts using the Render method. This shoul
 usually be done immediately before the closing body (</body>) tag.
 
 	Html.ScriptKeeper().Render();
+//////////////////////////////////////////////////////////////////////////////
+
+//////////////////////////////////////////////////////////////////////////////
+Source:
+
+The code is hosted on Google Code: http://code.google.com/p/script-keeper/
+
+This project is primarily developed using the Mono runtime and the MonoDevelop IDE.
+It should always compile in Visual Studio and be usable in the .NET runtime as well.
 //////////////////////////////////////////////////////////////////////////////
