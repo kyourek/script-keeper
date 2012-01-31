@@ -1,0 +1,51 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Keeper.OfScripts", "Keeper.OfScripts\Keeper.OfScripts.csproj", "{7F890D6C-1E6C-4938-8749-079EBEB6FB4B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Keeper.OfScripts.Tests", "Keeper.OfScripts.Tests\Keeper.OfScripts.Tests.csproj", "{24BB300F-3008-484D-A766-610FE1E553DD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Keeper.OfScripts.Example", "Keeper.OfScripts.Example\Keeper.OfScripts.Example.csproj", "{95F17DC8-B6D7-44D8-BFEC-EB3F3F633964}"
+EndProject
+Project("{9344bdbb-3e7f-41fc-a0dd-8665d75ee146}") = "Packages", "Packages\Packages.mdproj", "{A93D3D32-9C38-4528-8772-A0BC653270B3}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{24BB300F-3008-484D-A766-610FE1E553DD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{24BB300F-3008-484D-A766-610FE1E553DD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{24BB300F-3008-484D-A766-610FE1E553DD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{24BB300F-3008-484D-A766-610FE1E553DD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7F890D6C-1E6C-4938-8749-079EBEB6FB4B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7F890D6C-1E6C-4938-8749-079EBEB6FB4B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7F890D6C-1E6C-4938-8749-079EBEB6FB4B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7F890D6C-1E6C-4938-8749-079EBEB6FB4B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{95F17DC8-B6D7-44D8-BFEC-EB3F3F633964}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{95F17DC8-B6D7-44D8-BFEC-EB3F3F633964}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{95F17DC8-B6D7-44D8-BFEC-EB3F3F633964}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{95F17DC8-B6D7-44D8-BFEC-EB3F3F633964}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A93D3D32-9C38-4528-8772-A0BC653270B3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A93D3D32-9C38-4528-8772-A0BC653270B3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(MonoDevelopProperties) = preSolution
+		StartupItem = Keeper.OfScripts.Example\Keeper.OfScripts.Example.csproj
+		Policies = $0
+		$0.DotNetNamingPolicy = $1
+		$1.DirectoryNamespaceAssociation = None
+		$1.ResourceNamePolicy = FileFormatDefault
+		$0.VersionControlPolicy = $2
+		$2.inheritsSet = Mono
+		$0.ChangeLogPolicy = $3
+		$3.UpdateMode = None
+		$3.MessageStyle = $4
+		$4.LineAlign = 0
+		$3.inheritsSet = Mono
+		description = MVC Script Registrar
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
