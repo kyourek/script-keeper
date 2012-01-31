@@ -8,7 +8,7 @@
     <Packages>
       <Packages>
         <Package name="MSBuild (Visual Studio 2008) Sources">
-          <Builder targetFile="..\Keeper.OfScripts.tar.gz" format="MonoDevelop.Projects.FileFormat" ctype="SourcesZipPackageBuilder">
+          <Builder targetFile="..\script-keeper-source.zip" format="MonoDevelop.Projects.FileFormat" ctype="SourcesZipPackageBuilder">
             <ChildEntries>
               <SolutionItemReference path="..\Keeper.OfScripts\Keeper.OfScripts.csproj" />
               <SolutionItemReference path="..\Keeper.OfScripts.Tests\Keeper.OfScripts.Tests.csproj" />
@@ -22,6 +22,9 @@
             <ChildEntries>
               <SolutionItemReference path="..\Keeper.OfScripts\Keeper.OfScripts.csproj" />
             </ChildEntries>
+            <ExcludedFiles>
+              <File>Keeper.OfScripts,ProgramFiles,System.Web.Mvc.dll</File>
+            </ExcludedFiles>
             <RootEntry path="..\Keeper.OfScripts.sln" id=":root:" />
           </Builder>
         </Package>
@@ -30,6 +33,9 @@
             <ChildEntries>
               <SolutionItemReference path="..\Keeper.OfScripts\Keeper.OfScripts.csproj" />
             </ChildEntries>
+            <ExcludedFiles>
+              <File>Keeper.OfScripts,ProgramFiles,System.Web.Mvc.dll</File>
+            </ExcludedFiles>
             <RootEntry path="..\Keeper.OfScripts.sln" id=":root:" />
           </Builder>
         </Package>
