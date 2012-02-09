@@ -40,5 +40,5 @@ namespace Keeper.OfScripts
 			
 			return true;
 		}		
-	}	
+	}
 }
