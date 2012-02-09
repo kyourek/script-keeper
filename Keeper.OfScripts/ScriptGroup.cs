@@ -13,32 +13,7 @@ namespace Keeper.OfScripts
 	/// A group of scripts that is responsible for tracking which static scripts
 	/// have been registered.
 	/// </summary>
-	public interface IScriptGroup
-	{
-		/// <summary>
-		/// Gets the name of this script group.
-		/// </summary>
-		string Name { get; }
-		
-		/// <summary>
-		/// Renders the output HTML for including all scripts registered
-		/// with this group in the client browser.
-		/// </summary>
-		/// <returns>
-		/// A string of HTML that can be included in a page to include all
-		/// scripts registered with this instance.
-		/// </returns>
-		string Render();
-		
-		/// <summary>
-		/// Registers the specified scripts with this instance. If any scripts
-		/// are found to already exist, no action is taken.
-		/// </summary>
-		/// <param name='scripts'>
-		/// The scripts to be registered.
-		/// </param>
-		void Register(params string[] scripts);
-	}
+	public interface IScriptGroup : IPageResourceGroup { }
 		
 	internal abstract class ScriptGroup<TScript> : IScriptGroup, IEnumerable<TScript>
 		where TScript : Script
