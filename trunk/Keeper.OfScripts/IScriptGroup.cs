@@ -33,9 +33,9 @@ namespace Keeper.OfScripts
     	
 	internal class InlineScriptGroup : PageResourceGroup<InlineScript>, IScriptGroup
 	{
-		public override bool HasRegistered(string script)
+		public override bool HasRegistered(string resource)
 		{
-			return this.FirstOrDefault(s => s.Source == script) != null;	
+			return this.FirstOrDefault(s => s.Source == resource) != null;	
 		}
 		
 		public override void Register(params string[] resources)
