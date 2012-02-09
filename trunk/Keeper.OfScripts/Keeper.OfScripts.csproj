@@ -48,6 +48,10 @@
     <Compile Include="ScriptKeeper.cs" />
     <Compile Include="Html\HtmlHelperExtensions.cs" />
     <Compile Include="IScriptHelper.cs" />
+    <Compile Include="PageResource.cs" />
+    <Compile Include="Style.cs" />
+    <Compile Include="ILocalResourceHelper.cs" />
+    <Compile Include="IPageResourceGroup.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
