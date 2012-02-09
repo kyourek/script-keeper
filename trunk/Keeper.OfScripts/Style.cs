@@ -17,9 +17,9 @@ namespace Keeper.OfScripts
 		}
 	}
 	
-	internal class HeadStyle : Style
+	internal class EmbeddedStyle : Style
 	{
-		public HeadStyle(string source) : base(source) { }
+		public EmbeddedStyle(string source) : base(source) { }
 		
 		public override string Render()
 		{
@@ -30,4 +30,3 @@ namespace Keeper.OfScripts
 		}
 	}
 }
-

@@ -63,7 +63,7 @@ namespace Keeper.OfScripts.Tests
 			{
 				scriptGroup.Add(script2);
 			}
-			catch (ScriptAlreadyAddedException)
+			catch (ResourceAlreadyAddedException)
 			{
 				return;
 			}
@@ -90,7 +90,7 @@ namespace Keeper.OfScripts.Tests
 			{
 				scriptGroup.Add(script2);
 			}
-			catch (ScriptAlreadyAddedException)
+			catch (ResourceAlreadyAddedException)
 			{
 				return;
 			}
@@ -117,7 +117,7 @@ namespace Keeper.OfScripts.Tests
 			{
 				scriptGroup.Add(script2);
 			}
-			catch (ScriptAlreadyAddedException)
+			catch (ResourceAlreadyAddedException)
 			{
 				return;
 			}
@@ -319,7 +319,7 @@ namespace Keeper.OfScripts.Tests
 			{
 				scriptGroup.Register(script);	
 			}
-			catch (ScriptNotFoundException)
+			catch (ResourceNotFoundException)
 			{
 				return;	
 			}

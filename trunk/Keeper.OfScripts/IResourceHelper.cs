@@ -13,6 +13,8 @@ namespace Keeper.OfScripts
 	/// </summary>
 	public interface ILocalScriptHelper : ILocalResourceHelper { }
 	
+    public interface ILocalStyleHelper : ILocalResourceHelper { }
+    
 	/// <summary>
 	/// Helper object for resolving paths, etc., for the <c>ScriptKeeper</c>.
 	/// </summary>
@@ -21,7 +23,12 @@ namespace Keeper.OfScripts
 		ILocalScriptHelper Local { get; }	
 	}
 	
-	class RequestContextLocalHelper : ILocalScriptHelper
+    public interface IStyleHelper
+    {
+        ILocalStyleHelper Local { get; }   
+    }
+    
+	class RequestContextLocalHelper : ILocalResourceHelper, ILocalScriptHelper, ILocalStyleHelper
 	{
 		private readonly UrlHelper _UrlHelper;
 		private readonly RequestContext _RequestContext;
@@ -47,13 +54,13 @@ namespace Keeper.OfScripts
 		}
 	}
 	
-	class RequestContextHelper : IScriptHelper
+	class RequestContextHelper : IScriptHelper, IStyleHelper
 	{
 		private readonly RequestContext _RequestContext;
-		private readonly ILocalScriptHelper _Local;
+		private readonly RequestContextLocalHelper _Local;
 		
 		public RequestContext RequestContext { get { return _RequestContext; } }
-		public ILocalScriptHelper Local { get { return _Local; } }
+		public RequestContextLocalHelper Local { get { return _Local; } }
 		
 		public RequestContextHelper(RequestContext requestContext)
 		{
@@ -62,5 +69,15 @@ namespace Keeper.OfScripts
 			_RequestContext = requestContext;
 			_Local = new RequestContextLocalHelper(_RequestContext);
 		}
+        
+        ILocalScriptHelper IScriptHelper.Local
+        {
+            get { return Local; }   
+        }
+        
+        ILocalStyleHelper IStyleHelper.Local
+        {
+            get { return Local; }   
+        }
 	}
 }
