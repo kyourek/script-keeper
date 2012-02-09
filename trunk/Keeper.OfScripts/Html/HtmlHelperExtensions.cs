@@ -9,8 +9,27 @@ namespace Keeper.OfScripts.Html
 	/// </summary>
 	public static class HtmlHelperExtensions
 	{
-		private static readonly string Key = typeof(ScriptKeeper).AssemblyQualifiedName;
-
+		private static readonly string StyleKeeperKey = typeof(StyleKeeper).AssemblyQualifiedName;
+		private static readonly string ScriptKeeperKey = typeof(ScriptKeeper).AssemblyQualifiedName;
+		
+		public static StyleKeeper StyleKeeper(this HtmlHelper html)
+		{
+			if (html == null) throw new ArgumentNullException("html");
+			
+			var viewContext = html.ViewContext;
+			var httpContext = viewContext.HttpContext;
+			var styleKeeper = httpContext.Items[StyleKeeperKey] as StyleKeeper;
+			
+			if (styleKeeper == null)
+			{
+				var keeperHelper = new RequestContextHelper(viewContext.RequestContext);
+				
+				httpContext.Items[StyleKeeperKey] = styleKeeper = new StyleKeeper(keeperHelper);
+			}
+			
+			return styleKeeper;
+		}
+		
 		/// <summary>
 		/// Returns an instance of <c>ScriptKeeper</c> that can be used to register
 		/// script files in the current context.
@@ -30,13 +49,13 @@ namespace Keeper.OfScripts.Html
 			
 			var viewContext = html.ViewContext;
 			var httpContext = viewContext.HttpContext;
-			var scriptKeeper = httpContext.Items[Key] as ScriptKeeper;
+			var scriptKeeper = httpContext.Items[ScriptKeeperKey] as ScriptKeeper;
 			
 			if (scriptKeeper == null)
 			{
 				var keeperHelper = new RequestContextHelper(viewContext.RequestContext);
 				
-				httpContext.Items[Key] = scriptKeeper = new ScriptKeeper(keeperHelper);
+				httpContext.Items[ScriptKeeperKey] = scriptKeeper = new ScriptKeeper(keeperHelper);
 			}
 			
 			return scriptKeeper;

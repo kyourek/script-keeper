@@ -53,6 +53,7 @@
     <Compile Include="IScriptGroup.cs" />
     <Compile Include="IResourceHelper.cs" />
     <Compile Include="IStyleGroup.cs" />
+    <Compile Include="StyleKeeper.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
