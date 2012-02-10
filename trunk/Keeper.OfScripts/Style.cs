@@ -13,7 +13,7 @@ namespace Keeper.OfScripts
 		
 		public override string Render()
 		{
-			return "<link rel='stylesheet' type='text/css' href='" + Source + "' />";
+			return "<link rel=\"stylesheet\" type=\"text/css\" href=\"" + Source + "\" />";
 		}
 	}
 	
@@ -23,8 +23,8 @@ namespace Keeper.OfScripts
 		
 		public override string Render()
 		{
-			var s = "<style type='text/css'>";
-			s += Source;
+			var s = "<style type=\"text/css\">" + Environment.NewLine;
+			s += Source + Environment.NewLine;
 			s += "</style>";			
 			return s;
 		}

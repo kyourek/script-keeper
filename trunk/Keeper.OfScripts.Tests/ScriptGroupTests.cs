@@ -28,7 +28,6 @@ namespace Keeper.OfScripts.Tests
 		public void LocalScriptGroupConstructorTest()
 		{
 			var scriptGroup = new LocalScriptGroup();
-			
 			Assert.IsNotNull(scriptGroup);
 		}
 		
@@ -36,15 +35,13 @@ namespace Keeper.OfScripts.Tests
 		public void InlineScriptGroupConstructorTest()
 		{
 			var scriptGroup = new InlineScriptGroup();	
-			
 			Assert.IsNotNull(scriptGroup);
 		}
 		
 		[Test]
 		public void RemoteScriptGroupConstructorTest()
 		{
-			var scriptGroup = new RemoteScriptGroup();
-			
+			var scriptGroup = new RemoteScriptGroup();	
 			Assert.IsNotNull(scriptGroup);
 		}
 		

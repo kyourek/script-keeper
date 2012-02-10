@@ -10,7 +10,7 @@ namespace Keeper.OfScripts
 		protected override LinkedStyle CreateResource(string source)
 		{
 			return new LinkedStyle(source);
-		}	
+		}
 	}
 	
 	internal class EmbeddedStyleGroup : PageResourceGroup<EmbeddedStyle>, IStyleGroup
@@ -32,7 +32,7 @@ namespace Keeper.OfScripts
 		
 		public override string Render()
 		{
-			var str = "<style type='text/css'>" + Environment.NewLine;
+			var str = "<style type=\"text/css\">" + Environment.NewLine;
 			foreach (var style in this)
 				str += style.Source + Environment.NewLine;
 			str += "</style>";
