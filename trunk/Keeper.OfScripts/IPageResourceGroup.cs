@@ -31,7 +31,7 @@ namespace Keeper.OfScripts
         /// </param>
         void Register(params string[] resources);        
     }
-    
+
     internal abstract class PageResourceGroup<TResource> : IPageResourceGroup, IEnumerable<TResource>
         where TResource : PageResource
     {
