@@ -1,1 +1,1 @@
-<%@ Application Inherits="Keeper.OfScripts.Example.MvcApplication" %>
+﻿<%@ Application Codebehind="Global.asax.cs" Inherits="Keeper.OfScripts.Example.MvcApplication" Language="C#" %>
