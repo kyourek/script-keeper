@@ -60,7 +60,7 @@ namespace Keeper.OfScripts
         
         public void Add(TResource resource)
         {
-            if (_List.Contains(resource)) throw new ResourceAlreadyAddedException("The script has already been added.");
+            if (_List.Contains(resource)) throw new ResourceAlreadyAddedException("The resource has already been added.");
             _List.Add(resource);  
         }
         

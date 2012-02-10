@@ -4,7 +4,7 @@ using System.Reflection;
 
 namespace Keeper.OfScripts.Tests
 {
-	class MockLocalHelper : ILocalScriptHelper
+	class MockLocalHelper : ILocalScriptHelper, ILocalStyleHelper
 	{
 		public string UrlContent(string contentPath)
 		{
