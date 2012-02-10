@@ -12,14 +12,14 @@ namespace Keeper.OfScripts.Html
 		private static readonly string StyleKeeperKey = typeof(StyleKeeper).AssemblyQualifiedName;
 		private static readonly string ScriptKeeperKey = typeof(ScriptKeeper).AssemblyQualifiedName;
 		
-		public static StyleKeeper StyleKeeper(this HtmlHelper html)
+		internal static StyleKeeper StyleKeeper(this HtmlHelper html)
 		{
 			if (html == null) throw new ArgumentNullException("html");
 			
 			var viewContext = html.ViewContext;
 			var httpContext = viewContext.HttpContext;
 			var styleKeeper = httpContext.Items[StyleKeeperKey] as StyleKeeper;
-			
+
 			if (styleKeeper == null)
 			{
 				var keeperHelper = new RequestContextHelper(viewContext.RequestContext);
