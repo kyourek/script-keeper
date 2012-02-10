@@ -166,8 +166,49 @@ namespace Keeper.OfScripts.Tests
 		[Test]
 		public void LocalStyleGroupRegisterTest3()
 		{
-	
+			var styleGroup = new LocalStyleGroup { Helper = new MockLocalHelper() };
+			var style1 = "~/Styles/Style1.css";
+			var style2 = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location) + "/Styles/Style1.css";
+			
+			styleGroup.Register(style1, style2);
+			Assert.AreEqual(1, styleGroup.Count);
+		}
+		
+		[Test]
+		public void LocalStyleGroupRegisterTest4()
+		{
+			var styleGroup = new LocalStyleGroup { Helper = new MockLocalHelper() };
+			var style = "~/Styles/DoesNotExist.css";
+			
+			try
+				
+			{
+				styleGroup.Register(style);	
+			}
+			catch (ResourceNotFoundException)
+			{
+				return;	
+			}
+			catch (Exception)
+			{
+				Assert.Fail("Incorrect exception thrown.");	
+			}
+			Assert.Fail("No exception thrown.");
+		}	
+		
+		[Test]
+		public void EmbeddedStyleGroupRegisterTest3()
+		{
+			var styleGroup = new EmbeddedStyleGroup();
+			var style1 = "#world { color:blue; }";
+			var style2 = "#world { color:blue; }";
+			var style3 = "#earth { color:green; }";
+			
+			styleGroup.Register(style1, style2, style3);
+
+			Assert.AreEqual(2, styleGroup.Count);
+			Assert.AreEqual(style1, styleGroup.First().Source);
+			Assert.AreEqual(style3, styleGroup.Skip(1).First().Source);
 		}
 	}
 }
-
