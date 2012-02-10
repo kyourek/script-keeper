@@ -21,11 +21,13 @@ namespace Keeper.OfScripts.Tests
 		}
 	}
 	
-	class MockHelper : IScriptHelper
+	class MockHelper : IScriptHelper, IStyleHelper
 	{
-		private readonly ILocalScriptHelper _Local = new MockLocalHelper();
+		private readonly MockLocalHelper _Local = new MockLocalHelper();
 		
 		public ILocalScriptHelper Local { get { return _Local; } }		
+		
+		ILocalStyleHelper IStyleHelper.Local { get { return _Local; } }
 	}	
 }
 
