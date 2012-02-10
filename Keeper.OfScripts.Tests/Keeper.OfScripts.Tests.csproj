@@ -50,9 +50,9 @@
     <Compile Include="ScriptTests.cs" />
     <Compile Include="ScriptGroupTests.cs" />
     <Compile Include="ScriptKeeperTests.cs" />
-    <Compile Include="MockScriptHelper.cs" />
     <Compile Include="StyleTests.cs" />
     <Compile Include="StyleGroupTests.cs" />
+    <Compile Include="MockHelper.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
