@@ -32,6 +32,6 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyVersion("0.1")]
 [assembly: AssemblyFileVersion("0.1")]
 
-/// Allows the unit test project to access classes and members declared
-/// as internal to this assembly.
+// Allows the unit test project to access classes and members declared
+// as internal to this assembly.
 [assembly:InternalsVisibleTo("Keeper.OfScripts.Tests")]
