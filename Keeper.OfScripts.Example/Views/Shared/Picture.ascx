@@ -2,7 +2,14 @@
 
 <%     
     // Register jQuery (fancybox requires it) from Google's CDN using the remote ScriptKeeper
-    Html.ScriptKeeper().Remote.Register("//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js");
+    // We'll use the alias here, to keep the CDN address easily updatable.
+    // See the Web.config file for the configuration scheme.
+    Html.ScriptKeeper().Register("jQuery");
+    
+    // Alternatively, the remote group could be used to register the script.
+    // If you don't want to use the Web.config file for aliases, then this is
+    // what you'd do:
+    // Html.ScriptKeeper().Remote.Register("//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js");
     
     // We can use other jQuery plugins by registering them with the local ScriptKeeper.
     Html.ScriptKeeper().Local.Register("~/Scripts/fancybox/jquery.easing-1.3.pack.js");
