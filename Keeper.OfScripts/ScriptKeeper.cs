@@ -83,7 +83,7 @@ namespace Keeper.OfScripts
             
             var residence = string.IsNullOrEmpty(source.Residence) ? Remote.Name : source.Residence;
 
-            if (residence == Local.Name)
+            if (residence.ToLowerInvariant() == Local.Name.ToLowerInvariant())
                 Local.Register(source.Source);
             else
                 Remote.Register(source.Source);
