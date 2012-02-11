@@ -13,6 +13,14 @@ namespace Keeper.OfScripts
 		}
 	}
 	
+    internal class RemoteStyleGroup : RemoteResourceGroup<LinkedStyle>, IStyleGroup
+    {
+        protected override LinkedStyle CreateResource(string source)
+        {
+            return new LinkedStyle(source);
+        }   
+    }
+    
 	internal class EmbeddedStyleGroup : PageResourceGroup<EmbeddedStyle>, IStyleGroup
 	{
 		public override bool HasRegistered(string resource)
