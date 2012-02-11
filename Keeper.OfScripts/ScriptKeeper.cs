@@ -1,5 +1,8 @@
 using System;
+using System.Linq;
 using System.Web.Routing;
+
+using Keeper.OfScripts.Configuration;
 
 namespace Keeper.OfScripts
 {
@@ -40,7 +43,7 @@ namespace Keeper.OfScripts
 		/// Gets the script helper object with which this <c>ScriptKeeper</c> was created.
 		/// </summary>
 		public IScriptHelper Helper { get { return _Helper; } }
-		
+		        
 		/// <summary>
 		/// Initializes a new instance of the <see cref="Keeper.OfScripts.ScriptKeeper"/> class.
 		/// </summary>
@@ -59,6 +62,33 @@ namespace Keeper.OfScripts
 			_Local = new LocalScriptGroup { Name = "Local", Helper = _Helper.Local };
 			_Remote = new RemoteScriptGroup { Name = "Remote" };
 			_Inline = new InlineScriptGroup { Name = "Inline" };
+		}
+		
+		/// <summary>
+		/// Registers the specified alias from the configuration file.
+		/// </summary>
+		/// <param name="alias">
+		/// The alias whose source should be registered. The group with
+		/// which the source is registered is determined by the residence
+		/// value of the alias.
+		/// </param>
+		public void Register(string alias)
+		{            
+			var source = KeeperConfig.Instance.Section
+                .Aliases
+                .Cast<ResourceAliasElement>()
+                .FirstOrDefault(a => a.Alias == alias);
+            
+            if (null == source) throw new ArgumentException("The alias '" + alias + "' does not exist in the configuration.");
+            
+            var residenceType = AliasSourceResidence.Remote;
+            if (!string.IsNullOrEmpty(source.Residence))
+                residenceType = (AliasSourceResidence)Enum.Parse(typeof(AliasSourceResidence), source.Residence, true);
+            
+            if (residenceType == AliasSourceResidence.Local)
+                Local.Register(source.Source);
+            else
+                Remote.Register(source.Source);
 		}
 		
 		/// <summary>

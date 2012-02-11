@@ -1,8 +1,11 @@
 using System;
+using System.Configuration;
+
 using NUnit.Framework;
+using Keeper.OfScripts.Configuration;
 
 namespace Keeper.OfScripts.Tests
-{
+{   
 	[TestFixture]
 	public class ScriptKeeperTests
 	{	
@@ -45,5 +48,16 @@ namespace Keeper.OfScripts.Tests
 			
 			Assert.IsTrue(object.ReferenceEquals(keeperHelper, scriptKeeper.Helper));
 		}
+        
+        [Test]
+        public void RegisterTest()
+        {
+            var keeperHelper = new MockHelper();
+            var scriptKeeper = new ScriptKeeper(keeperHelper);
+            
+            scriptKeeper.Register("jQuery");
+            var rendered = "<script type=\"text/javascript\" src=\"//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js\"></script>";
+            Assert.AreEqual(rendered, scriptKeeper.Remote.Render());
+        }
 	}
 }
