@@ -81,11 +81,9 @@ namespace Keeper.OfScripts
             
             if (null == source) throw new ArgumentException("The alias '" + alias + "' does not exist in the configuration.");
             
-            var residenceType = AliasSourceResidence.Remote;
-            if (!string.IsNullOrEmpty(source.Residence))
-                residenceType = (AliasSourceResidence)Enum.Parse(typeof(AliasSourceResidence), source.Residence, true);
-            
-            if (residenceType == AliasSourceResidence.Local)
+            var residence = string.IsNullOrEmpty(source.Residence) ? Remote.Name : source.Residence;
+
+            if (residence == Local.Name)
                 Local.Register(source.Source);
             else
                 Remote.Register(source.Source);

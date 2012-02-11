@@ -180,8 +180,7 @@ namespace Keeper.OfScripts.Tests
 			var styleGroup = new LocalStyleGroup { Helper = new MockLocalHelper() };
 			var style = "~/Styles/DoesNotExist.css";
 			
-			try
-				
+			try				
 			{
 				styleGroup.Register(style);	
 			}
