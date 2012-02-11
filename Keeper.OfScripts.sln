@@ -64,6 +64,7 @@ Global
 		$7.inheritsScope = text/x-csharp
 		$7.scope = text/x-csharp
 		description = MVC Script Registrar
+		version = 0.2
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
