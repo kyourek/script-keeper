@@ -1,0 +1,68 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Keeper.OfScripts", "Keeper.OfScripts\Keeper.OfScripts.csproj", "{7F890D6C-1E6C-4938-8749-079EBEB6FB4B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Keeper.OfScripts.Tests", "Keeper.OfScripts.Tests\Keeper.OfScripts.Tests.csproj", "{24BB300F-3008-484D-A766-610FE1E553DD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Keeper.OfScripts.Example", "Keeper.OfScripts.Example\Keeper.OfScripts.Example.csproj", "{1612FB5E-743E-4282-8CEC-E855A0A99BEC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7F890D6C-1E6C-4938-8749-079EBEB6FB4B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7F890D6C-1E6C-4938-8749-079EBEB6FB4B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7F890D6C-1E6C-4938-8749-079EBEB6FB4B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7F890D6C-1E6C-4938-8749-079EBEB6FB4B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{24BB300F-3008-484D-A766-610FE1E553DD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{24BB300F-3008-484D-A766-610FE1E553DD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{24BB300F-3008-484D-A766-610FE1E553DD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{24BB300F-3008-484D-A766-610FE1E553DD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1612FB5E-743E-4282-8CEC-E855A0A99BEC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1612FB5E-743E-4282-8CEC-E855A0A99BEC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1612FB5E-743E-4282-8CEC-E855A0A99BEC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1612FB5E-743E-4282-8CEC-E855A0A99BEC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(MonoDevelopProperties) = preSolution
+		StartupItem = Keeper.OfScripts.Example\Keeper.OfScripts.Example.csproj
+		Policies = $0
+		$0.DotNetNamingPolicy = $1
+		$1.DirectoryNamespaceAssociation = None
+		$1.ResourceNamePolicy = FileFormatDefault
+		$0.VersionControlPolicy = $2
+		$2.inheritsSet = Mono
+		$0.ChangeLogPolicy = $3
+		$3.UpdateMode = None
+		$3.MessageStyle = $4
+		$4.LineAlign = 0
+		$3.inheritsSet = Mono
+		$0.TextStylePolicy = $5
+		$5.FileWidth = 120
+		$5.EolMarker = Mac
+		$5.inheritsSet = VisualStudio
+		$5.inheritsScope = text/plain
+		$5.scope = text/plain
+		$0.TextStylePolicy = $6
+		$6.inheritsSet = null
+		$6.scope = text/x-csharp
+		$0.CSharpFormattingPolicy = $7
+		$7.BeforeMethodDeclarationParentheses = False
+		$7.BeforeMethodCallParentheses = False
+		$7.BeforeConstructorDeclarationParentheses = False
+		$7.BeforeIndexerDeclarationBracket = False
+		$7.BeforeDelegateDeclarationParentheses = False
+		$7.NewParentheses = False
+		$7.SpacesBeforeBrackets = False
+		$7.inheritsSet = Mono
+		$7.inheritsScope = text/x-csharp
+		$7.scope = text/x-csharp
+		description = MVC Script Registrar
+		version = 0.2
+	EndGlobalSection
+EndGlobal
