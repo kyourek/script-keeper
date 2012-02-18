@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>ScriptKeeper</id>
+    <version>$version$</version>
+    <title>ScriptKeeper</title>
+    <authors>Ken Yourek</authors>
+    <owners>Ken Yourek</owners>
+    <licenseUrl>http://www.opensource.org/licenses/mit-license.php</licenseUrl>
+    <projectUrl>http://code.google.com/p/script-keeper/</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>
+	    JavaScript and web resource registrar for .NET MVC.
+    </description>
+	<summary>
+	    ScriptKeeper keeps track of your scripts. You can use it to register a JavaScript file multiple times
+		but keep that script referenced only once on the final page. It also accepts aliases for scripts defined
+		in your Web.config file. Everything works via HtmlHelper extension methods. The code is hosted at 
+		Google Code: http://code.google.com/p/script-keeper/.
+	</summary>
+    <copyright>Copyright Ken Yourek 2012</copyright>
+    <tags>MVC Script-Registrar Web-Resource JavaScript</tags>
+  </metadata>
+</package>
