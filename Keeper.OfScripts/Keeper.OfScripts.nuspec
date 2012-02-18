@@ -10,7 +10,7 @@
     <projectUrl>http://code.google.com/p/script-keeper/</projectUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>
-	    JavaScript and web resource registrar for .NET MVC.
+	    JavaScript and web resource manager for .NET MVC.
     </description>
 	<summary>
 	    ScriptKeeper keeps track of your scripts. You can use it to register a JavaScript file multiple times
@@ -19,6 +19,6 @@
 		Google Code: http://code.google.com/p/script-keeper/.
 	</summary>
     <copyright>Copyright Ken Yourek 2012</copyright>
-    <tags>MVC Script-Registrar Web-Resource JavaScript</tags>
+    <tags>MVC Script-Manager JavaScript</tags>
   </metadata>
 </package>
