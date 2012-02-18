@@ -1,0 +1,9 @@
+<configuration>
+  <system.web>
+    <pages>
+      <namespaces>
+        <add namespace="Keeper.OfScripts.Html"/>
+      </namespaces>
+    </pages>
+  </system.web>
+</configuration>
