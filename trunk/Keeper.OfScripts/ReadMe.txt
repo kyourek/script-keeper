@@ -1,4 +1,5 @@
-ScriptKeeper tracks scripts.
+///////////////////////////////////////////////////////////////////////////////
+ScriptKeeper keeps track of scripts.
 
 //////////////////////////////////////////////////////////////////////////////
 License:
@@ -70,6 +71,10 @@ Register short inline scripts using the 'Inline' script group:
 Register remote scripts, i.e. scripts from a CDN, using the 'Remote' script group:
 
     Html.ScriptKeeper().Remote.Register("//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js");
+    
+Aliases can also be defined in the Web.config:
+
+    Html.ScriptKeeper().Register("jquery");
     
 Render the output of your registered scripts using the Render method. This should
 usually be done immediately before the closing body (</body>) tag.
