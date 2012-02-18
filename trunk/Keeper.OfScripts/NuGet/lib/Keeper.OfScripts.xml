@@ -1,0 +1,213 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Keeper.OfScripts</name>
+    </assembly>
+    <members>
+        <member name="T:Keeper.OfScripts.ResourceAlreadyAddedException">
+            <summary>
+            Exception that is thrown when an attempt is made to add a resource
+            that has already been added to a resource group.
+            </summary>
+        </member>
+        <member name="M:Keeper.OfScripts.ResourceAlreadyAddedException.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Keeper.OfScripts.ResourceAlreadyAddedException"/> class.
+            </summary>
+        </member>
+        <member name="M:Keeper.OfScripts.ResourceAlreadyAddedException.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Keeper.OfScripts.ResourceAlreadyAddedException"/> class.
+            </summary>
+            <param name="message">
+            The exception message.
+            </param>
+        </member>
+        <member name="M:Keeper.OfScripts.ResourceAlreadyAddedException.#ctor(System.String,System.Exception)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Keeper.OfScripts.ResourceAlreadyAddedException"/> class.
+            </summary>
+            <param name="message">
+            The exception message.
+            </param>
+            <param name="innerException">
+            The inner exception.
+            </param>
+        </member>
+        <member name="T:Keeper.OfScripts.ResourceNotFoundException">
+            <summary>
+            Exception that is thrown when an attempt is made to register a local resource
+            that does not exist on the server.
+            </summary>
+        </member>
+        <member name="M:Keeper.OfScripts.ResourceNotFoundException.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Keeper.OfScripts.ResourceNotFoundException"/> class.
+            </summary>
+        </member>
+        <member name="M:Keeper.OfScripts.ResourceNotFoundException.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Keeper.OfScripts.ResourceNotFoundException"/> class.
+            </summary>
+            <param name="message">
+            The exception message.
+            </param>
+        </member>
+        <member name="M:Keeper.OfScripts.ResourceNotFoundException.#ctor(System.String,System.Exception)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Keeper.OfScripts.ResourceNotFoundException"/> class.
+            </summary>
+            <param name="message">
+            The exception message.
+            </param>
+            <param name="innerException">
+            The inner exception.
+            </param>
+        </member>
+        <member name="T:Keeper.OfScripts.Html.HtmlHelperExtensions">
+            <summary>
+            HtmlHelper extensions for the <c>ScriptKeeper</c> class.
+            </summary>
+        </member>
+        <member name="M:Keeper.OfScripts.Html.HtmlHelperExtensions.ScriptKeeper(System.Web.Mvc.HtmlHelper)">
+            <summary>
+            Returns an instance of <c>ScriptKeeper</c> that can be used to register
+            script files in the current context.
+            </summary>
+            <returns>
+            The instance of <c>ScriptKeeper</c>.
+            </returns>
+            <param name="html">
+            The instance of <c>HtmlHelper</c> that will return a <c>ScriptKeeper</c>.
+            </param>
+            <exception cref="T:System.ArgumentNullException">
+            Thrown if <paramref name="html"/> is <see langword="null"/> .
+            </exception>
+        </member>
+        <member name="T:Keeper.OfScripts.ILocalScriptHelper">
+            <summary>
+            Helper for local script groups that can resolve paths
+            to local files on the server.
+            </summary>
+        </member>
+        <member name="M:Keeper.OfScripts.ILocalResourceHelper.ServerPath(System.String)">
+            <summary>
+            Resolves the absolute path to <paramref name="contentPath"/>.
+            </summary>
+            <returns>
+            The absolute path of <paramref name="contentPath"/>.
+            </returns>
+            <param name='contentPath'>
+            The content path to resolve. This path can begin with a '~'
+            to denote a path relative to the web root.
+            </param>
+        </member>
+        <member name="M:Keeper.OfScripts.ILocalResourceHelper.UrlContent(System.String)">
+            <summary>
+            Resolves the path to <paramref name="contentPath"/> relative to the web root.
+            </summary>
+            <returns>
+            The resolved path of <paramref name="contentPath"/> relative to the web root.
+            </returns>
+            <param name='contentPath'>
+            The content path to resolve. This path can begin with a '~'
+            to denote a path relative to the web root.
+            </param>
+        </member>
+        <member name="T:Keeper.OfScripts.IScriptHelper">
+            <summary>
+            Helper object for resolving paths, etc., for the <c>ScriptKeeper</c>.
+            </summary>
+        </member>
+        <member name="M:Keeper.OfScripts.IPageResourceGroup.Render">
+            <summary>
+            Renders the output HTML for including all resources registered
+            with this group in the client browser.
+            </summary>
+            <returns>
+            A string of HTML that can be included in a page to include all
+            resources registered with this instance.
+            </returns>
+        </member>
+        <member name="M:Keeper.OfScripts.IPageResourceGroup.Register(System.String[])">
+            <summary>
+            Registers the specified resources with this instance. If any resources
+            are found to already exist, no action is taken.
+            </summary>
+            <param name='resources'>
+            The resources to be registered.
+            </param>
+        </member>
+        <member name="P:Keeper.OfScripts.IPageResourceGroup.Name">
+            <summary>
+            Gets the name of this resource group.
+            </summary>
+        </member>
+        <member name="T:Keeper.OfScripts.IScriptGroup">
+            <summary>
+            A group of scripts that is responsible for tracking which static scripts
+            have been registered.
+            </summary>
+        </member>
+        <member name="T:Keeper.OfScripts.ScriptKeeper">
+            <summary>
+            Container to hold multiple <c>ScriptGroup</c> instances. Each group can be
+            used to register particular scripts.
+            </summary>
+        </member>
+        <member name="M:Keeper.OfScripts.ScriptKeeper.#ctor(Keeper.OfScripts.IScriptHelper)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Keeper.OfScripts.ScriptKeeper"/> class.
+            </summary>
+            <param name="scriptHelper">
+            The script helper that is responsible for resolving paths, etc.
+            </param>
+            <exception cref="T:System.ArgumentNullException">
+            Thrown when <paramref name="scriptHelper"/> is <see langword="null"/> .
+            </exception>
+        </member>
+        <member name="M:Keeper.OfScripts.ScriptKeeper.Register(System.String)">
+            <summary>
+            Registers the specified alias from the configuration file.
+            </summary>
+            <param name="alias">
+            The alias whose source should be registered. The group with
+            which the source is registered is determined by the residence
+            value of the alias.
+            </param>
+        </member>
+        <member name="M:Keeper.OfScripts.ScriptKeeper.Render">
+            <summary>
+            Renders all instances of <c>ScriptGroup</c> in this container.
+            The default order of rendering is: Remote, Local, Inline.
+            </summary>
+        </member>
+        <member name="P:Keeper.OfScripts.ScriptKeeper.Local">
+            <summary>
+            Gets the <c>ScriptGroup</c> instance used to register
+            scripts that reside on the local server.
+            </summary>
+        </member>
+        <member name="P:Keeper.OfScripts.ScriptKeeper.Remote">
+            <summary>
+            Gets the <c>ScriptGroup</c> instance used to register
+            scripts that reside on remote servers, such as CDNs.
+            </summary>
+        </member>
+        <member name="P:Keeper.OfScripts.ScriptKeeper.Inline">
+            <summary>
+            Gets the <c>ScriptGroup</c> instance used to register
+            inline scripts.
+            </summary>
+            <remarks>
+            Scripts registered with this group should be short and unique.
+            Use with caution (for now).
+            </remarks>
+        </member>
+        <member name="P:Keeper.OfScripts.ScriptKeeper.Helper">
+            <summary>
+            Gets the script helper object with which this <c>ScriptKeeper</c> was created.
+            </summary>
+        </member>
+    </members>
+</doc>
