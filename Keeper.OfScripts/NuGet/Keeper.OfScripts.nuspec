@@ -10,7 +10,9 @@
     <projectUrl>http://code.google.com/p/script-keeper/</projectUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>
-	    JavaScript and web resource manager for .NET MVC.
+	    JavaScript and web resource manager for .NET MVC. You can use the ScriptKeeper to register a JavaScript file multiple times
+		but keep that script referenced only once on the final page. It also accepts aliases for scripts defined
+		in your Web.config file.
     </description>
 	<summary>
 	    ScriptKeeper keeps track of your scripts. You can use it to register a JavaScript file multiple times
