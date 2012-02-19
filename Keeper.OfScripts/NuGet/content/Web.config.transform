@@ -1,4 +1,22 @@
 <configuration>
+  <configSections>
+    <section name="keeperConfig" type="Keeper.OfScripts.Configuration.KeeperConfigSection, Keeper.OfScripts" />
+  </configSections>
+  <keeperConfig>
+    <aliases>
+      <clear />
+      <!-- 
+        The keeperConfig section can be used to set up aliases for resources that may change in the future.
+        You only need to register the alias to register the resource.
+        
+        For example, to register jQuery using Google's CDN with the alias below, you'd write:
+          @{ Html.ScriptKeeper().Register("jQuery"); }
+        somewhere in your views.
+      -->   
+      <add alias="jQuery" source="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" residence="remote" />           
+    </aliases>
+  </keeperConfig>     
+  
   <system.web>
     <pages>
       <namespaces>
